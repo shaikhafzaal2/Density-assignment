@@ -1,6 +1,6 @@
+
 import { makeStyles } from "@material-ui/styles";
 import { fade } from "@material-ui/core/styles/colorManipulator";
-
 export default makeStyles(theme => ({
   logotype: {
     color: "white",
@@ -9,21 +9,23 @@ export default makeStyles(theme => ({
     fontWeight: 500,
     fontSize: 18,
     whiteSpace: "nowrap",
-    [theme.breakpoints.down("xs")]: {
+    [theme.breakpoints.down('md')]: {
       display: "none",
     },
   },
   appBar: {
+   
     width: "100vw",
-    zIndex: theme.zIndex.drawer + 1,
-    transition: theme.transitions.create(["margin"], {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
+    // zIndex: theme.zIndex.drawer + 1,
+    
   },
   toolbar: {
     paddingLeft: theme.spacing(2),
     paddingRight: theme.spacing(2),
+  },
+  logo: {
+    paddingRight: theme.spacing(2),
+   
   },
   hide: {
     display: "none",
@@ -63,6 +65,14 @@ export default makeStyles(theme => ({
       cursor: "pointer",
     },
   },
+  menuItem:{
+    "&:hover, &:focus": {
+      textDecoration: "underline",
+      backgroundColor: theme.palette.background.light,
+      // color: "white",
+    },
+
+  },
   searchIconOpened: {
     right: theme.spacing(1.25),
   },
@@ -93,13 +103,19 @@ export default makeStyles(theme => ({
       // color: "white",
     },
   },
+
   headerMenuButton: {
-    marginLeft: theme.spacing(2),
-    padding: theme.spacing(0.5),
+    
+   
+    marginLeft: theme.spacing(1.6),
+    padding: theme.spacing(0.3),
+  },
+  headerMenuIcon: {    height: 35,
+   
   },
   headerMenuButtonSandwich: {
     marginLeft: 9,
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down('lg')]: {
       marginLeft: 0
     },
     padding: theme.spacing(0.5),
@@ -167,7 +183,7 @@ export default makeStyles(theme => ({
     marginLeft: theme.spacing(2),
   },
   purchaseBtn: {
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('lg')]: {
       display: 'none'
     },
     marginRight: theme.spacing(3)

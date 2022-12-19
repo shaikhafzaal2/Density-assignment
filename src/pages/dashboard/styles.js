@@ -30,6 +30,14 @@ export default makeStyles(theme => ({
     alignItems: "flex-end",
     marginRight: theme.spacing(1),
   },
+  topbarcard: {
+    backgroundColor:theme.palette.background.default,
+    color:"white",
+    display: "flex",
+    justifyContent: "space-between",
+    // alignItems: "center",
+    marginBottom: theme.spacing(1),
+  },
   legendItemContainer: {
     display: "flex",
     alignItems: "center",
