@@ -8,7 +8,7 @@ function userReducer(state, action) {
     case "LOGIN_SUCCESS":
       return { ...state, isAuthenticated: true };
     case "SIGN_OUT_SUCCESS":
-      return { ...state, isAuthenticated: false };
+      return { ...state, isAuthenticated: true };
     default: {
       throw new Error(`Unhandled action type: ${action.type}`);
     }
@@ -17,7 +17,7 @@ function userReducer(state, action) {
 
 function UserProvider({ children }) {
   var [state, dispatch] = React.useReducer(userReducer, {
-    isAuthenticated: !!localStorage.getItem("id_token"),
+    isAuthenticated: true,
   });
 
   return (
