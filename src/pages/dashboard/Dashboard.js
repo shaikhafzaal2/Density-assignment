@@ -16,9 +16,7 @@ import { useTheme } from "@material-ui/styles";
 import { ReactComponent as EtherLogo } from "../../images/etheriunLogo.svg";
 // styles
 import useStyles from "./styles";
-// import { w3cwebsocket as W3CWebSocket } from "websocket";
 
-// const client = new W3CWebSocket('wss://ws-api.binance.com:443/ws-api/v3');
 var data = {
   "id": "e2a85d9f-07a5-4f94-8d5f-789dc3deb097",
   "method": "order.place",
@@ -48,40 +46,19 @@ export default function Dashboard(props) {
     }, []);
 
     useEffect(() => {
-      // ws.current.send(JSON.stringify({
-      //       ...data,   
-      //     }))
+    
 
         ws.current.onmessage = e => {            
             const message = JSON.parse(e.data);
             console.log("e", message);
         };
     }, []);
-  // const ws = useRef(null);
-//   useEffect(() => {
-//     client.onopen = () => {
-//       console.log('WebSocket Client Connected');
-//     };
-//     client.onmessage = (message) => {
-//       console.log(message);
-//     };
 
-   
-// }, []);
-
-// useEffect(() => {
-//   client.send(JSON.stringify({
-//     ...data,   
-//   }));
- 
-// }, []);
 
   
   var theme = useTheme();
   var classes = useStyles();
 
-  // local
-  // var [mainChartState, setMainChartState] = useState("monthly");
 
   return (
     <>

@@ -21,16 +21,12 @@ import useStyles from "./styles";
 
 // components
 import Header from "../Header";
-import Sidebar from "../Sidebar";
+// import Sidebar from "../Sidebar";
 
 // pages
 import Dashboard from "../../pages/dashboard";
-import Typography from "../../pages/typography";
-import Notifications from "../../pages/notifications";
-import Maps from "../../pages/maps";
-import Tables from "../../pages/tables";
-import Icons from "../../pages/icons";
-import Charts from "../../pages/charts";
+
+
 
 // context
 import { useLayoutState } from "../../context/LayoutContext";

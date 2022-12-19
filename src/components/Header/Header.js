@@ -26,7 +26,7 @@ import useStyles from "./styles";
 
 // components
 import { Badge, Typography, Button } from "../Wrappers";
-import Notification from "../Notification/Notification";
+// import Notification from "../Notification/Notification";
 import UserAvatar from "../UserAvatar/UserAvatar";
 import { ReactComponent as MsgIcon } from "../../images/Icons/messageIcon.svg";
 import { ReactComponent as ProfileIcon } from "../../images/Icons/profileIcon.svg";
@@ -38,7 +38,7 @@ import { ReactComponent as LogoutIcon } from "../../images/Icons/logoutIcon.svg"
 import {
   useLayoutState,
   useLayoutDispatch,
-  toggleSidebar,
+
 } from "../../context/LayoutContext";
 import { useUserDispatch, signOut } from "../../context/UserContext";
 
