@@ -30,6 +30,7 @@
     "tinycolor2": "^1.4.2"
   },
   "scripts": {
+    "deploy": "yarn install && yarn build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
